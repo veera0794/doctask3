@@ -2,9 +2,16 @@ version: '3.8'
 services:
   web:
     build: .
-    image: nginx
+    image: nginx1
     volumes:
-      - web_data:/var/opt/nginx
+      - web_data:/var/opt/nginx1
+  service1:
+    build: .
+    image: localhost:5000/nginx1
+
+  service2:
+    build: .
+    image: prema07/nginx1
 
 volumes:
   web_data:
